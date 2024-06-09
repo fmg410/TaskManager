@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<DialogPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.manager.NewTaskDialog"
+            style="-fx-background-color: white" prefWidth="900">
+    <content>
+        <GridPane vgap="10" hgap="10">
+            <Label text="Task name:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="taskNameField" GridPane.rowIndex="0" GridPane.columnIndex="1" GridPane.columnSpan="3"/>
+            <Label text="Additional info:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextArea fx:id="additionalInfoArea" GridPane.rowIndex="1" GridPane.columnIndex="1"
+                      wrapText="true" GridPane.columnSpan="3"/>
+            <Label text="Starting time:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <Label text="Ending time:" GridPane.rowIndex="2" GridPane.columnIndex="2"/>
+            <HBox GridPane.rowIndex="2" GridPane.columnIndex="1">
+                <Spinner fx:id="spinnerStartHour" min="0" max="23" initialValue="12"/>
+                <Spinner fx:id="spinnerStartMinute" min="0" max="59" initialValue="30"/>
+            </HBox>
+            <HBox GridPane.rowIndex="2" GridPane.columnIndex="3">
+                <Spinner fx:id="spinnerEndHour" min="0" max="23" initialValue="12"/>
+                <Spinner fx:id="spinnerEndMinute" min="0" max="59" initialValue="30"/>
+            </HBox>
+            <Label text="Choose task type" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <ComboBox fx:id="taskComboBox" GridPane.rowIndex="3" GridPane.columnIndex="1" GridPane.columnSpan="2">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Daily task"/>
+                        <String fx:value="Every certain days task"/>
+                        <String fx:value="Weekly task"/>
+                        <String fx:value="Monthly task"/>
+                        <String fx:value="Specified data task"/>
+                        <String fx:value="Yearly task"/>
+                    </FXCollections>
+                </items>
+                <value>
+                    <String fx:value="Daily task"/>
+                </value>
+            </ComboBox>
+        </GridPane>
+    </content>
+</DialogPane>

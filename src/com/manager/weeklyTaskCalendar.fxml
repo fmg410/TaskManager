@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<DialogPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.manager.WeeklyTaskCalendar"
+            style="-fx-background-color: white"
+            prefWidth="1400">
+    <content>
+        <GridPane>
+            <columnConstraints>
+                <ColumnConstraints percentWidth="14"/>
+                <ColumnConstraints percentWidth="14"/>
+                <ColumnConstraints percentWidth="14"/>
+                <ColumnConstraints percentWidth="14"/>
+                <ColumnConstraints percentWidth="14"/>
+                <ColumnConstraints percentWidth="14"/>
+                <ColumnConstraints percentWidth="16"/>
+            </columnConstraints>
+            <HBox alignment="CENTER" GridPane.columnIndex="0">
+                <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                    <Label text="Monday">
+                        <font>
+                            <Font name="Times New Roman bold" size="16"/>
+                        </font>
+                    </Label>
+                    <ListView fx:id="mondayTasks"/>
+                </VBox>
+            </HBox>
+            <HBox alignment="CENTER" GridPane.columnIndex="1">
+                <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                    <Label text="Tuesday">
+                        <font>
+                            <Font name="Times New Roman bold" size="16"/>
+                        </font>
+                    </Label>
+                    <ListView fx:id="tuesdayTasks"/>
+                </VBox>
+            </HBox>
+            <HBox alignment="CENTER" GridPane.columnIndex="2">
+                <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                    <Label text="Wednesday">
+                        <font>
+                            <Font name="Times New Roman bold" size="16"/>
+                        </font>
+                    </Label>
+                    <ListView fx:id="wednesdayTasks"/>
+                </VBox>
+            </HBox>
+            <HBox alignment="CENTER" GridPane.columnIndex="3">
+                <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                    <Label text="Thursday">
+                        <font>
+                            <Font name="Times New Roman bold" size="16"/>
+                        </font>
+                    </Label>
+                    <ListView fx:id="thursdayTasks"/>
+                </VBox>
+            </HBox>
+            <HBox alignment="CENTER" GridPane.columnIndex="4">
+                <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                    <Label text="Friday">
+                        <font>
+                            <Font name="Times New Roman bold" size="16"/>
+                        </font>
+                    </Label>
+                    <ListView fx:id="fridayTasks"/>
+                </VBox>
+            </HBox>
+            <HBox alignment="CENTER" GridPane.columnIndex="5">
+                <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                    <Label text="Saturday">
+                        <font>
+                            <Font name="Times New Roman bold" size="16"/>
+                        </font>
+                    </Label>
+                    <ListView fx:id="saturdayTasks"/>
+                </VBox>
+            </HBox>
+            <HBox alignment="CENTER" GridPane.columnIndex="6">
+                <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                    <Label text="Sunday">
+                        <font>
+                            <Font name="Times New Roman bold" size="16"/>
+                        </font>
+                    </Label>
+                    <ListView fx:id="sundayTasks"/>
+                </VBox>
+            </HBox>
+        </GridPane>
+    </content>
+</DialogPane>
